@@ -1,17 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="./assets/css/home.css">
-    <title>Landing page - Tailwhind</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fábrica de Projetos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
+          });
+        });
+      });
+    });
+  </script>
 </head>
-<body>
-    <h1 class="text-3xl font-bold">
-        Teste
-    </h1>
-</body>
+<body class="bg-white text-gray-800 font-sans">
 
-<script src="./assets/js/home.js"></script>
+  <nav class="fixed top-0 left-0 right-0 bg-white shadow z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-end space-x-6 text-sm font-medium">
+      <a href="#empresa" class="hover:text-blue-600">Bredas</a>
+      <a href="#projeto" class="hover:text-blue-600">Projeto</a>
+      <a href="#membros" class="hover:text-blue-600">Membros</a>
+    </div>
+  </nav>
+
+  <main class="pt-24 max-w-7xl mx-auto px-4">
+    <section class="text-center mb-12">
+      <h1 class="text-4xl font-bold">Fábrica de Projetos Grupo SLA</h1>
+    </section>
+
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-16">
+      <div id="curso">
+        <h2 class="text-xl font-semibold mb-2">Curso</h2>
+        <p>Fábrica de Projetos é uma disciplina que dá aos alunos a oportunidade de trabalhar em equipe em projetos reais, aplicando seus conhecimentos aprendidos no semestre para resolver problemas dados pelas empresas que fazem parceria com os cursos de tecnologia.</p>
+      </div>
+      <div id="empresa">
+        <h2 class="text-xl font-semibold mb-2">Empresa</h2>
+        <p>A Bredas Sistemas, localizada em Marília, SP, é especializada em soluções de gestão empresarial (ERP) desde 1990, atendendo MEIs, comércio, indústria, serviços e escolas. A empresa se destaca pela inovação em tecnologia e atendimento humanizado, ajudando empresários a otimizar suas operações.</p>
+      </div>
+      <div id="projeto">
+        <h2 class="text-xl font-semibold mb-2">Projeto</h2>
+        <p>Empresas que utilizam o VendaSimples querem criar uma Vitrine Virtual para exibir produtos e promoções, atraindo clientes e estimulando a exploração da loja. A vitrine deve ser visualmente atraente e permitir contato via WhatsApp para dúvidas ou compras, sem incluir pagamentos.</p>
+      </div>
+    </section>
+
+</body>
 </html>
