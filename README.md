@@ -30,7 +30,7 @@ Descrição do tema escolhido pelo grupo, os objetivos a serem alcançados, e a 
 Apresentação de todos os integrantes do grupo. Para cada membro, a página exibe:
 
 - Uma foto
-- Nome completo
+- Nomes completos
 - Função/atividade exercida dentro do projeto
 
 ## Tecnologias Utilizadas
