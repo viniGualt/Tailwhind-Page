@@ -1,5 +1,6 @@
 var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
 var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+var botaoContato = document.getElementById("botaoContato")
 
 if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     themeToggleLightIcon.classList.remove('hidden');
@@ -32,5 +33,20 @@ themeToggleBtn.addEventListener('click', function() {
             localStorage.setItem('color-theme', 'dark');
         }
     }
-    
 });
+
+botaoContato.onclick = function () {
+    const mensagem = document.getElementById("message").value.trim();
+    const nome = document.getElementById("nome").value.trim();
+    const numeroWhatsApp = "551434133244";
+    let url = ""
+
+    if (nome === "" || mensagem === "") {
+        url = `https://wa.me/${numeroWhatsApp}`;
+    } else {
+        const textoCodificado = encodeURIComponent(`Olá, me chamo ${nome}. ${mensagem}`);
+        url = `https://wa.me/${numeroWhatsApp}?text=${textoCodificado}`;
+    }
+
+    window.open(url, "_blank");
+};

@@ -1,0 +1,17 @@
+#title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    
+    color: #000;
+}
+
+.dark #title {
+    position: relative;
+    color: #fff;
+    text-shadow:
+        0 0 100px #3B82F6, 
+        0 0 30px #3B82F6,
+        0 0 4px #3B82F6, 
+        2px 2px 8px rgba(0, 0, 0, 0.5);
+}
